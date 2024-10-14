@@ -8,3 +8,6 @@ def displayCourse(request):
 
 def insertCourse(request):
     return render(request,"course/course_insert.html")
+
+def homePage(request):
+     return render(request,"course/home_page.html")

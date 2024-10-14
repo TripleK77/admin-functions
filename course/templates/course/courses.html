@@ -1,16 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Courses</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-</head>
-<body>
-    <h1 class="text-center mt-5 text-success m-3 border" style="background-color: rgb(242, 229, 191)">All Courses</h1>
+{% include 'course/header.html'%}
+
+    <h1 class="text-center mt-5 text-success m-3 border p-3 shadow" >All Courses</h1>
+    <div class="px-5 d-flex justify-content-end">
+      <a href="{% url 'insert' %}" class="btn btn-outline-success mb-3">+ ADD COURSE</a>
+    </div>
     <div class="row justify-content-center">
       <div class="col-md-4 p-5 border shadow">
-        <h3 class="text-center">Course List</h3>
+        <h3 class="text-center">Course List</h3> 
         <div class="d-flex justify-content-center" >
           <ul class="list-group list-group">
             <a href="#java" class="list-group-item">Java Courses</a>
@@ -36,7 +32,7 @@
             <h5 class="card-title">Start Date : 01-11-2024</h5>
             
             <p class="card-text"></p>
-            <a href="{% url 'insert' %}" class="btn btn-primary">Course Details</a>
+            <a href="{% url 'course' %}" class="btn btn-primary">Course Details</a>
           </div>
         </div>
 
@@ -49,7 +45,7 @@
             <h5 class="card-title">Start Date : 01-11-2024</h5>
             
             <p class="card-text"></p>
-            <a href="{% url 'insert' %}" class="btn btn-primary">Course Details</a>
+            <a href="{% url 'course' %}" class="btn btn-primary">Course Details</a>
           </div>
         </div>
   </div>
@@ -71,13 +67,14 @@
                 <h5 class="card-title">Start Date : 01-11-2024</h5>
                 
                 <p class="card-text"></p>
-                <a href="{% url 'insert' %}" class="btn btn-primary">Course Details</a>
+                <a href="{% url 'course' %}" class="btn btn-primary">Course Details</a>
               </div>
             </div>
   
   </div>
       </div>
     </div>
+  {% include 'course/footer.html'%}
 
    
 <!-- 
@@ -106,6 +103,4 @@
             <h3>Java Courses</h3>
         </div>
     </div> -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</body>
-</html>
+    
