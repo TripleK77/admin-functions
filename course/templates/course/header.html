@@ -43,7 +43,7 @@ integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEw
 </head>
 <body>
     <div class="bg-dark p-5">
-        <div class="d-flex justify-content-between">
+        <!-- <div class="d-flex justify-content-between">
             <div>
                 <a href="{% url 'courses' %}" class="text-light fs-3 text-decoration-none">Advanced Micro System</a>
             </div>
@@ -53,8 +53,32 @@ integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEw
                 <a href="#" class="btn btn-outline-warning">CONTACT</a>
             </div>
 
+        </div> -->
+        
+    <nav class="navbar navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+            <a href="{% url 'courses' %}" class=" fs-3 navbar-brand text-light">Advanced Micro System</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"><button class="btn btn-outline-success" type="submit">VIEW COURSES</button></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><button class="btn btn-outline-success" type="submit">ABOUT</button></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-disabled="true"><button class="btn btn-outline-success" type="submit">CONTACT</button></a>
+              </li>
+            </ul>
+          </div>
         </div>
+      </nav>
         <h2 class="text-shadow p-5 text-center">AMS Software Engineering School</h2>
 
     </div>
-    
+
+
+   
