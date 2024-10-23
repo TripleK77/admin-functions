@@ -11,3 +11,12 @@ def insertCourse(request):
 
 def homePage(request):
      return render(request,"course/home_page.html")
+
+def aboutPage(request):
+    return  render(request,"course/about.html")
+
+def contactPage(request):
+    return render(request,"course/contact.html")
+
+def userCourses(request):
+    return render(request,"course/user_courses.html")

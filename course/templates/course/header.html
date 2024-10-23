@@ -33,10 +33,22 @@ integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEw
 
         @media (max-width:768px){
             .img-nav{
-                display: block !important;
+                padding: 0 !important;
             }
             .text-shadow{
-                font-size: 20px;
+                font-size: 10px;
+                letter-spacing: 10px;
+            }
+            .img-nav .container1{
+                padding: 5px !important;
+            }
+            .navbar-toggler{
+                color: green !important;
+                border: 2px solid rgb(183, 135, 47)
+            }
+            .navbar-toggler-icon{
+                background-color: rgb(183, 135, 47) !important;
+                font-size: 15px;
             }
         }
     </style>
@@ -64,13 +76,13 @@ integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEw
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"><button class="btn btn-outline-success" type="submit">VIEW COURSES</button></a>
+                <a class="nav-link active" href="{% url 'userView'%}" aria-current="page" ><button class="btn btn-outline-success" type="submit">VIEW COURSES</button></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#"><button class="btn btn-outline-success" type="submit">ABOUT</button></a>
+                <a class="nav-link" href="{% url 'about'%}"><button class="btn btn-outline-success" type="submit">ABOUT</button></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-disabled="true"><button class="btn btn-outline-success" type="submit">CONTACT</button></a>
+                <a class="nav-link" href="{% url 'contact'%}" aria-disabled="true"><button class="btn btn-outline-success" type="submit">CONTACT</button></a>
               </li>
             </ul>
           </div>
