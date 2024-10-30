@@ -6,7 +6,7 @@
             <p class="text-warning  ">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati, natus. Veritatis consequuntur eos ab facilis nemo iure nostrum, ratione, dolore possimus aliquam vel! Alias consectetur blanditiis corrupti optio aliquam veritatis?
             </p>
-            <button class="btn btn-outline-success">CLICK TO VIEW OUR COURSES</button>
+            <a href="{% url 'userView' %}" class="btn btn-outline-success">CLICK TO VIEW OUR COURSES</a>
 
         </div>
         <div class="col-12 col-md-6">
@@ -19,8 +19,9 @@
         <h4 class="text-center">CONTACT WITH</h4>
         <div class="py-3 d-flex justify-content-center">
             <div class="btn btn-outline-dark p-3">
+                <a href="{% url 'contact' %}" class="text-decoration-none">
                 <img src="{% get_media_prefix %}course/facebook.png" alt="My Image" style="width: 30px;" alt="">
-                <span></span>
+                </a>
             </div>
             <div class="btn btn-outline-dark p-3">
                 <img src="{% get_media_prefix %}course/telegram.png" style="width: 30px;" alt="">
@@ -34,7 +35,6 @@
                 <img src="{% get_media_prefix %}course/messenger.png" style="width: 30px;" alt="">
                 <span></span>
             </div>
-            
         </div>
 
         <div class="mt-5 border">
@@ -45,21 +45,21 @@
                     <h3 class="text-info">Web Dev</h3>
                     <p class="text-secondary">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, nulla, maxime quae deserunt asperiores itaque voluptatem, assumenda magni quas nesciunt
                          incidunt? Veniam, repellat officia! Ipsa quasi voluptatum modi nisi repellat.</p>
-                    <a href="#" class="btn btn-warning">VIEW WEB COURSE</a>
+                    <a href="{% url 'userView' %}" class="btn btn-warning">VIEW WEB COURSE</a>
                 </div>
 
                 <div class="rounded text-center p-5 bg-dark me-1 col-md-3 col-sm-12 col-12">
                     <h3 class="text-info">Mobile</h3>
                     <p class="text-secondary">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, nulla, maxime quae deserunt asperiores itaque voluptatem, assumenda magni quas nesciunt
                          incidunt? Veniam, repellat officia! Ipsa quasi voluptatum modi nisi repellat.</p>
-                    <a href="#" class="btn btn-warning">VIEW WEB COURSE</a>
+                    <a href="{% url 'userView' %}" class="btn btn-warning">VIEW WEB COURSE</a>
                 </div>
 
                 <div class="rounded text-center p-5 bg-dark me-1 col-md-3 col-sm-12 col-12">
                     <h3 class="text-info">API</h3>
                     <p class="text-secondary">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, nulla, maxime quae deserunt asperiores itaque voluptatem, assumenda magni quas nesciunt
                          incidunt? Veniam, repellat officia! Ipsa quasi voluptatum modi nisi repellat.</p>
-                    <a href="#" class="btn btn-warning">VIEW WEB COURSE</a>
+                    <a href="{% url 'userView' %}" class="btn btn-warning">VIEW WEB COURSE</a>
                 </div>
 
             </div>

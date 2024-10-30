@@ -20,3 +20,7 @@ def contactPage(request):
 
 def userCourses(request):
     return render(request,"course/user_courses.html")
+
+def register(request):
+    print("Method id",request.method)
+    return render(request,"course/register.html")
