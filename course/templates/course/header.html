@@ -6,7 +6,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    {% if title %}
+    <title>{{title}}</title>
+    {% else %}
+    <title>Home Page</title>
+    {% endif %}
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
 integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -103,7 +108,16 @@ integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEw
             </div>
 
         </div> -->
-        
+    {% if messages %}
+    <div>
+        {% for message in messages %}
+        <h3 class="text-white">{{message}}</h3>
+        {% endfor %}
+    </div>
+    {% else %}
+    <h3 class="text-white">No message</h3>
+    {% endif %}
+
     <nav class="navbar navbar-expand-lg bg-dark">
         <div class="container-fluid">
             <a href="{% url 'home' %}" class=" fs-3 navbar-brand text-light">Advanced Micro System</a>
@@ -115,6 +129,19 @@ integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEw
               <li class="nav-item">
                 <a class="nav-link active" href="{% url 'userView'%}" aria-current="page" ><button class="btn btn-outline-success" type="submit">VIEW COURSES</button></a>
               </li>
+
+              <li class="nav-item">
+                <a class="nav-link active" href="{% url 'login'%}" aria-current="page" ><button class="btn btn-outline-success" type="submit">FUNCTIONS</button></a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active" href="{% url 'login'%}" aria-current="page" ><button class="btn btn-outline-success" type="submit">LOGIN</button></a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active" href="{% url 'login'%}" aria-current="page" ><button class="btn btn-outline-success" type="submit">Logout</button></a>
+              </li>
+
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'about'%}"><button class="btn btn-outline-success" type="submit">ABOUT</button></a>
               </li>

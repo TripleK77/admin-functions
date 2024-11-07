@@ -1,0 +1,39 @@
+{% load static %}
+{% include 'course/header.html'%}
+
+
+<h1 class="text-center mt-5">LOGIN</h1>
+        <div class="col-md-6 offset-md-3 mt-5 p-5 shadow">
+          <form method="post" >
+            {% csrf_token %}
+        <div>
+            <div class="input-group mb-3 reg-row">
+            <span class="input-group-text col-md-2 col reg-col" id="basic-addon1">Name </span>
+            <input type="text" class="form-control col-md-10 col reg-col" name="name" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+        </div>
+      
+        <div>
+          <div class="input-group mb-3 reg-row">
+        <span class="input-group-text col-md-2 col reg-col" id="basic-addon1">Phone</span>
+        <input type="text" class="form-control col-md-10 col reg-col" name="phone" aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+      </div>
+  
+
+    
+    <div>
+      <button type="submit" class="btn btn-success">Save</button>
+      <button type="reset" class="btn btn-warning">Cancel</button>
+    </div>
+
+    </form>
+  </div>
+
+
+
+
+
+
+
+{% include 'course/footer.html'%}

@@ -9,4 +9,5 @@ urlpatterns = [
     path('about',aboutPage,name='about'),
     path('user',userCourses,name='userView'),
     path('register',register,name='register'),
+    path('login',login,name='login'),
 ]

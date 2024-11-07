@@ -9,11 +9,13 @@
         <h3 class="text-center">Course List</h3> 
         <div class="d-flex justify-content-center" >
           <ul class="list-group list-group">
-            <a href="#java" class="list-group-item">Java Courses</a>
-            <a href="#python" class="list-group-item">Python Courses<a>
+            {% for link ,c in courses  %}
+            <a href={{link}} class="list-group-item">{{c}}</a>
+            {%  endfor %}
+            <!-- <a href="#python" class="list-group-item">Python Courses<a>
             <a href="#" class="list-group-item">PHP Courses</a>
             <a href="#" class="list-group-item">Flutter Courses</a>
-            <a href="#" class="list-group-item">MatLab Courses</a>
+            <a href="#" class="list-group-item">MatLab Courses</a> -->
           </ul>
         </div>
 
@@ -22,19 +24,22 @@
         
     <div class="  mt-5" id="java" >
       <h3>Java Courses</h3>
-
+      {% for jc in java_courses %}
       <div class="card mb-3">
           <div class="card-header">
-            <h3 class="text-center">Core Java</h3>
+            <h3 class="text-center">{{jc.title}}</h3>
           </div>
           <div class="card-body">
               <img class="w-100" src="https://www.oracle.com/img/tech/cb88-java-logo-001.jpg" alt="">
-            <h5 class="card-title">Start Date : 01-11-2024</h5>
+            <h5 class="card-title">Start Date : {{jc.start_date}}</h5>
+            <h5 class="card-title">Duration : {{jc.duration}}</h5>
+            <h5 class="card-title">Time : {{jc.time}}</h5>
             
             <p class="card-text"></p>
-            <a href="{% url 'course' %}" class="btn btn-primary">Course Details</a>
+            <a href="{% url 'course' %}" class="btn btn-primary">Edit</a>
           </div>
         </div>
+      {% endfor %}
 
         <div class="card mb-3">
           <div class="card-header">
@@ -51,10 +56,13 @@
   </div>
   <div class="  mt-5" id="python" >
     <div>
-      <a class="btn btn-info" href="#java">java</a>|
-      <a class="btn btn-info" href="#php">PHP</a>|
+      {% for l,c in courses %}
+      <a class="btn btn-info" href={{l}}>{{c}}</a>|
+      {% endfor %}
+      
+      <!-- <a class="btn btn-info" href="#php">PHP</a>|
       <a class="btn btn-info" href="#flutter">flutter</a>|
-      <a class="btn btn-info" href="matlab">matlab</a>|
+      <a class="btn btn-info" href="matlab">matlab</a>| -->
     </div>
     <h3>Python Courses</h3>
 
