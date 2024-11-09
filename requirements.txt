@@ -4,3 +4,4 @@ requests
 whitenoise
 dj_database_url
 dotenv
+psycopg2-binary
