@@ -27,9 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-
 # Application definition
-
 INSTALLED_APPS = [
     'course',
     'django.contrib.admin',
@@ -70,6 +68,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'admin_actions.wsgi.application'
+
 
 
 # Database

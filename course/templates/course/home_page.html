@@ -40,13 +40,13 @@
         <div class="mt-5 border">
             <h3 class="text-center mt-5 text-success">Main Courses That We Teach</h3>
             <div class="row justify-content-center">
-                {%for course in course_categories%}
+                {%for course in categories%}
                 <div class="rounded text-center p-5 bg-dark me-1 col-md-3 col-sm-12 col-12">
-                    <h3 class="text-info">{{course.title}}</h3>
+                    <h3 class="text-info">{{course.name}}</h3>
                     <p class="text-secondary">
-                        {{course.desc}}
+                        {{course.description}}
                     </p>
-                    <a href="{% url 'userView' %}" class="btn btn-warning">VIEW WEB COURSE</a>
+                        <a href="{% url 'userView' %}" class="btn btn-warning">VIEW {{course.name}}</a>
                 </div>
                 {% endfor %}
 
