@@ -31,3 +31,13 @@ class Student(models.Model):
     def __str__(self):
         return self.name
     
+class Teacher(models.Model):
+    name=models.CharField(max_length=100,null=True, blank=True)
+    email=models.EmailField(max_length=100,null=True, blank=True)
+    address=models.TextField(null=True, blank=True)
+    phone=models.CharField(max_length=100,null=True, blank=True)
+    education=models.CharField(max_length=100)
+    teach_courses=models.ManyToManyField(Course1,related_name='teachers')
+
+    def _str_(self):
+        return self.name

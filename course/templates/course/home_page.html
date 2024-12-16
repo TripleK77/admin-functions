@@ -18,20 +18,20 @@
     <div class="mt-5">
         <h4 class="text-center">CONTACT WITH</h4>
         <div class="py-3 d-flex justify-content-center">
-            <div class="btn btn-outline-dark p-3">
+            <div class="btn btn-outline-dark p-3 me-2">
                 <a href="{% url 'contact' %}" class="text-decoration-none">
                 <img src="{% get_media_prefix %}course/facebook.png" alt="My Image" style="width: 30px;" alt="">
                 </a>
             </div>
-            <div class="btn btn-outline-dark p-3">
+            <div class="btn btn-outline-dark p-3 me-2">
                 <img src="{% get_media_prefix %}course/telegram.png" style="width: 30px;" alt="">
                 <span></span>
             </div>
-            <div class="btn btn-outline-dark p-3">
+            <div class="btn btn-outline-dark p-3 me-2">
                 <img src="{% get_media_prefix %}course/viber.png" style="width: 30px;" alt="">
                 <span></span>
             </div>
-            <div class="btn btn-outline-dark p-3">
+            <div class="btn btn-outline-dark p-3 ">
                 <img src="{% get_media_prefix %}course/messenger.png" style="width: 30px;" alt="">
                 <span></span>
             </div>
@@ -41,7 +41,7 @@
             <h3 class="text-center mt-5 text-success">Main Courses That We Teach</h3>
             <div class="row justify-content-center">
                 {%for course in categories%}
-                <div class="rounded text-center p-5 bg-dark me-1 col-md-3 col-sm-12 col-12">
+                <div class="rounded text-center p-5 bg-dark me-1 col-md-3 col-sm-12 col-12 mb-3">
                     <h3 class="text-info">{{course.name}}</h3>
                     <p class="text-secondary">
                         {{course.description}}

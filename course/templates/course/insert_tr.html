@@ -1,0 +1,14 @@
+{% include 'course/header.html' %}
+{% load crispy_forms_tags %}
+    <h1>Insert Teacher Page</h1>
+    <div class="col-md-6 offset-md-3 mt-5 p-5 shadow">
+        
+        <form method="post">
+            {% csrf_token %}
+            {{form|crispy}}
+            <button type="submit" class="btn btn-success">SAVE</button>
+            <button type="reset" class="btn btn-warning">CLEAR</button>
+        </form>
+    </div>
+
+{% include 'course/footer.html' %}

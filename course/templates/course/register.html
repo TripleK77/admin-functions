@@ -38,9 +38,9 @@
         <div class="input-group mb-3 reg-row">
             <label class="input-group-text col-md-2 col reg-col" for="courses">Course</label>
               <select id="courses" name="courses" class="form-select col-md-10 col reg-col">
-                  <option >Java Course</option>
-                  <option >Python Course</option>
-                  <option >Flutter</option>
+                  {% for c in courses %}
+                  <option value="{{c.id}}" >{{c.title}}</option>
+                  {% endfor %}
               </select>
 
         </div>

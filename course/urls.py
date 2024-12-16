@@ -10,4 +10,5 @@ urlpatterns = [
     path('user',userCourses,name='userView'),
     path('register',register,name='register'),
     path('login',login,name='login'),
+    path('insertTr',insertTr,name="insertTr")
 ]

@@ -4,6 +4,7 @@ from django.contrib import messages
 from django.contrib.auth.models import User
 from .models import *
 from django.db import connection
+from .forms import*
 import psycopg2
 
 def showCourses(request):
@@ -220,19 +221,34 @@ def register(request):
         address=request.POST["address"]
         course=request.POST["courses"]
         print(name,email,phone,address,course,sep=" , ")
-        c=Student.object.create(name=name,email=email,address=address,phone=phone)
+        # c=Student(name=name,email=email,address=address,phone=phone,enrolled_courses=course)
+        c=Student(name=name,email=email,phone=phone,address=address)
         c.save()
-    return render(request,"course/register.html",{"title":"Register"})
+        c.enrolled_courses.add(course)
+    return render(request,"course/register.html",{"title":"Register","courses":courses})
 
 def login(request):
     if request.method=="POST":
         name=request.POST["name"]
-        phone=request.POST["phone"]
-        if name=="abc" and phone=="0987":
-            user=authenticate(name=name)
-            print("login success")
+        email=request.POST["email"]
+        student=Student.objects.get(name=name,email=email)
+        print("Student =>",student.name,student)
+        if student:
+            print("Login success")
             messages.add_message(request,messages.SUCCESS,'Login Success')
             return render(request,"course/home_page.html")
         else:
             return render(request,"course/login.html")
     return render(request,"course/login.html",{"title":"Login"})
+
+
+def insertTr(request):
+    if request.method=="POST":
+        form=TeacherForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return render(request,"course/home_page.html")
+    else: 
+        print("End")
+        form=TeacherForm()
+        return render(request,"course/insert_tr.html",{'form':form})
